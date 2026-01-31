@@ -1,0 +1,232 @@
+/* Frontend Alignment Standards */
+
+/* Auth Pages Container - Consistent spacing and centering */
+.auth-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+    background-color: #000000;
+    overflow-y: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Form Wrapper - Max width and centered */
+.form-wrapper {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 28rem; /* md: 448px */
+}
+
+/* Form Container - Login size */
+.form-wrapper-login {
+    max-width: 28rem; /* md: 448px */
+}
+
+/* Form Container - Register size */
+.form-wrapper-register {
+    max-width: 48rem; /* 2xl: 768px */
+}
+
+/* Header Section */
+.form-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form-header-logo {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.form-header-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.form-header-subtitle {
+    font-size: 0.875rem;
+    color: #a1a1aa;
+}
+
+/* Form Box */
+.form-box {
+    padding: 2rem;
+    border: 1px solid #3f3f46;
+    background-color: rgba(24, 24, 27, 0.5);
+    backdrop-filter: blur(20px);
+    border-radius: 1rem;
+}
+
+/* Form Fields */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-field-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #d4d4d8;
+}
+
+.form-field-input {
+    padding: 0.75rem;
+    background-color: rgba(39, 39, 42, 0.5);
+    border: 1px solid #3f3f46;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.form-field-input:focus {
+    border-color: #e78a53;
+    box-shadow: 0 0 0 3px rgba(231, 138, 83, 0.1);
+}
+
+/* Grid Layouts */
+.form-grid-2 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .form-grid-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.form-grid-3 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .form-grid-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Button */
+.form-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #e78a53;
+    color: #000000;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.form-button:hover:not(:disabled) {
+    background-color: rgba(231, 138, 83, 0.9);
+}
+
+.form-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Footer Links */
+.form-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.form-footer-text {
+    font-size: 0.875rem;
+    color: #a1a1aa;
+}
+
+.form-footer-link {
+    color: #e78a53;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.form-footer-link:hover {
+    color: rgba(231, 138, 83, 0.8);
+}
+
+/* Error Message */
+.form-error {
+    padding: 0.75rem;
+    background-color: rgba(127, 29, 29, 0.2);
+    border: 1px solid rgba(153, 27, 27, 0.5);
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    color: #fca5a5;
+}
+
+/* Success Message */
+.form-success {
+    padding: 0.75rem;
+    background-color: rgba(6, 78, 59, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.5);
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    color: #86efac;
+}
+
+/* Warning Message */
+.form-warning {
+    padding: 0.75rem;
+    background-color: rgba(113, 63, 18, 0.2);
+    border: 1px solid rgba(180, 83, 9, 0.5);
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    color: #fcd34d;
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0;
+    background: none;
+    border: none;
+    color: #a1a1aa;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+.back-button:hover {
+    color: #e78a53;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+    .form-header-title {
+        font-size: 1.5rem;
+    }
+
+    .form-box {
+        padding: 1.5rem;
+    }
+
+    .form-wrapper-register {
+        max-width: 100%;
+    }
+}
